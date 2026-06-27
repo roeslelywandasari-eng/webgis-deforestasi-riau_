@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Monitoring Deforestasi & Karbon - Riau</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Chart.js untuk Grafik -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Header Dashboard -->
+    <header>
+        <h1>DASHBOARD MONITORING DEFORESTASI & EMISI CO₂</h1>
+        <p>Provinsi Riau, Indonesia (Periode 2019 - 2023)</p>
+    </header>
+
+    <!-- Konten Utama -->
+    <main class="dashboard-container">
+        
+        <!-- Panel Kiri: Peta Interaktif -->
+        <section id="map-container">
+            <div id="map"></div>
+        </section>
+
+        <!-- Panel Kanan: Statistik & Grafik -->
+        <section id="stats-panel">
+            <h2>Ringkasan Eksekutif</h2>
+            <div class="kpi-container">
+                <div class="kpi-box">
+                    <h3>Total Deforestasi</h3>
+                    <p id="total-loss">566.024 Ha</p>
+                </div>
+                <div class="kpi-box">
+                    <h3>Estimasi Emisi CO₂</h3>
+                    <p id="total-co2">311.6 M Ton</p>
+                </div>
+            </div>
+            
+            <hr>
+            
+            <h2>Tren Kehilangan Tutupan Pohon Tahunan</h2>
+            <div class="chart-box">
+                <canvas id="lossChart"></canvas>
+            </div>
+        </section>
+
+    </main>
+
+<!-- Tambahkan baris ini di atas script.js -->
+    <script src="batas_riau.js"></script>
+    
+    <!-- Custom JS asli Anda -->
+    <script src="script.js"></script>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
